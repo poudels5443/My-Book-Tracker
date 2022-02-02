@@ -1,0 +1,27 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: main
+      username: QKwINoWzWTLnGYGjZGvsrdqY
+      password: ozuNo2jkg.DQZeUq6-1QQhfyaZfnQP2fGstFt4G,3LnU2OU0Z.Jb9ODcKD1thr.-lQr.F_mCe5e6ofkXbzMi,7c,0KvDWZA0AjA0ZRrn6wMmIdBGZeWzBpoora2uBILB
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+datastax.astra:
+    secure-connect-bundles: secure-connect.zip
+
+astra.db:
+    id: ff4c627a-4ef8-476d-96f2-4fad1bc70594-1
+    region: us-east1
+    keyspace: main
+    application.token: AstraCS:QKwINoWzWTLnGYGjZGvsrdqY:ca525abfc35fd5e53a2d5e440479dff2da69e90ca4c07f962d781d2c2c14e0e7
+
+
+
+ 
+ 
+      
