@@ -20,7 +20,7 @@ astra.db:
     keyspace: main
     application.token: AstraCS:krQrDMOJUSnLsruUxgDjNeEt:a3edd16d5d5a5e656940f8ae6c775e6754a636f482a813e755be1c9537022166
 
-
+spring.main.allow-circular-references: true
 
  
  
