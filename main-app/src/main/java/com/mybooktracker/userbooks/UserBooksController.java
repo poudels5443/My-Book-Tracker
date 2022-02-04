@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.util.Optional;
 
 import com.mybooktracker.book.Book;
+import com.mybooktracker.book.BookRepository;
+import com.mybooktracker.user.BooksByUser;
+import com.mybooktracker.user.BooksByUserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -19,7 +22,14 @@ public class UserBooksController {
     
     @Autowired 
     UserBooksRepository userBooksRepository;
+
+    @Autowired 
+    BooksByUserRepository booksByUserRepository;
+
+    @Autowired 
+    BookRepository bookRepository;
     
+
     @PostMapping("/addUserBook")
     public ModelAndView addBookForUser(
         @RequestBody MultiValueMap<String, String> formData, 
@@ -30,11 +40,17 @@ public class UserBooksController {
             return null;
         }
 
+        String bookId = formData.getFirst("bookId");
+        Optional<Book> optionalBook = bookRepository.findById(bookId);
+        if (!optionalBook.isPresent()) {
+            return new ModelAndView("redirect:/");
+        }
+        Book book = optionalBook.get();
+
         UserBooks userBooks  = new UserBooks();
         UserBooksPrimaryKey key = new UserBooksPrimaryKey();
         String userId = principal.getAttribute("login");
         key.setUserId(userId);
-        String bookId = formData.getFirst("bookId");
         key.setBookId(bookId);
 
         userBooks.setKey(key);
@@ -47,6 +63,17 @@ public class UserBooksController {
         userBooks.setReadingStatus(formData.getFirst("readingStatus"));
 
         userBooksRepository.save(userBooks);
+
+
+        BooksByUser booksByUser = new BooksByUser();
+        booksByUser.setId(userId);
+        booksByUser.setBookId(bookId);
+        booksByUser.setBookName(book.getName());
+        booksByUser.setCoverIds(book.getCoverIds());
+        booksByUser.setAuthorNames(book.getAuthorNames());
+        booksByUser.setReadingStatus(formData.getFirst("readingStatus"));
+        booksByUser.setRating(rating);
+        booksByUserRepository.save(booksByUser);
         return new ModelAndView("redirect:/books/" + bookId);
 
 
