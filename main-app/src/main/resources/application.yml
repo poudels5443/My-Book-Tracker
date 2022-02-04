@@ -6,3 +6,25 @@ spring:
           github:
             client-id: Iv1.0cf3e8cd2ab4a052
             client-secret: 6c674f662ecd5e24c27212ba6153f656b53f3c01
+  data:
+    cassandra:
+      keyspace-name: main
+      username: krQrDMOJUSnLsruUxgDjNeEt
+      password: bb3ODx8kEWZ8u7In_SafDdtZrcgBI7jopx.cUoxuI8PpOa72z_zjEnupTAxEND4gmloQ.orlcb4uQZwW+1x,CXNC0pxv9gNRWoLb.fd6FBqUA,4NvdBcocLuF,xqI_3a
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+  
+datastax.astra:
+    secure-connect-bundle: secure-connect.zip
+
+astra.db:
+    id: ff4c627a-4ef8-476d-96f2-4fad1bc70594-1
+    region: us-east1
+    keyspace: main
+    application.token: AstraCS:krQrDMOJUSnLsruUxgDjNeEt:a3edd16d5d5a5e656940f8ae6c775e6754a636f482a813e755be1c9537022166
+
+spring.main.allow-circular-references: true
