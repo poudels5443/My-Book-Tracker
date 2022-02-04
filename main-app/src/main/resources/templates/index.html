@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,8 +9,8 @@
     <base href="/" />
   </head>
   <body>
-    <h1>Better Reads</h1>
-
+    <h1>My Book Tracker</h1>
+    <div th:insert="components/book-search :: search-panel"></div>
     <p>Welcome to the Better Reads App. Login to Continue</p>
 
     <div>
