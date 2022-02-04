@@ -22,6 +22,7 @@ public class SecurityAdapter extends WebSecurityConfigurerAdapter {
 			.exceptionHandling(e -> e
 				.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
 			)
+			//.csrf().disable()
 			.csrf(c -> c
 				.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
 			)
