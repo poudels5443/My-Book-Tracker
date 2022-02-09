@@ -19,6 +19,10 @@ Any user can use the app to search for books, however the user is required to lo
   <b>Cover API</b> used to retrieve cover image of books is from <a>https://openlibrary.org/developers/api</a>
   
 # Screenshots
+<img src="https://github.com/poudels5443/Bug-Tracker/blob/master/images/login.PNG" />
+<img src="https://github.com/poudels5443/Bug-Tracker/blob/master/images/search.PNG" />
+<img src="https://github.com/poudels5443/Bug-Tracker/blob/master/images/mybooks.PNG" />
+<img src="https://github.com/poudels5443/Bug-Tracker/blob/master/images/book.PNG" />
 
 
   
