@@ -1,8 +1,10 @@
 # My Book Tracker
 This web app can keep the track of any book the user is reading or have already read out of over <b>~24 million</b> books stored in Database. 
 
+It is a full stack web application that is built to be highly scalabe and highly availabe.
+
 # Technologies Used
-  <b>Application Tier:</b> <a href=https://spring.io/projects/spring-boot>Spring Boot</a>
+  <b>Application Tier:</b> <a href=https://spring.io/projects/spring-boot target="_blank">Spring Boot</a>
   
   <b>Database:</b> Apache Cassandra
   
