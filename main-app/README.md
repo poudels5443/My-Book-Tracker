@@ -1,3 +1,24 @@
+# My Book Tracker
+This web app can keep the track of any book the user is reading or have already read out of over <b>~24 million</b> books stored in Database. 
+
+# Technologies Used
+  <b>Application Tier:</b> <a href=https://spring.io/projects/spring-boot>Spring Boot</a>
+  
+  <b>Database:</b> Apache Cassandra
+  
+  <b>Data Layer:</b> Spring Data Cassandra
+  
+  <b>Security:</b> Spring Security
+  
+  <b>View Layer:</b> Thymeleaf
+  
+  <b>Cover API</b> used to retrieve cover image of books is from <a>https://openlibrary.org/developers/api</a>
+  
+  
+  
+  
+
+
 # spring-github-login-starter
 Starter Spring Boot project for OAuth login with GitHub
 
