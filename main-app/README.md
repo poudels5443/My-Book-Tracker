@@ -6,13 +6,13 @@ It is a full stack web application that is built to be highly scalabe and highly
 # Technologies Used
   <b>Application Tier:</b> <a href=https://spring.io/projects/spring-boot target="_blank">Spring Boot</a>
   
-  <b>Database:</b> Apache Cassandra
+  <b>Database:</b> <a href="https://cassandra.apache.org/_/index.html">Apache Cassandra</a>
   
-  <b>Data Layer:</b> Spring Data Cassandra
+  <b>Data Layer:</b> <a href="https://spring.io/projects/spring-data-cassandra">Spring Data Cassandra</a>
   
-  <b>Security:</b> Spring Security
+  <b>Security:</b> <a href="https://spring.io/projects/spring-security">Spring Security</a>
   
-  <b>View Layer:</b> Thymeleaf
+  <b>View Layer:</b> <a href="https://www.thymeleaf.org/">Thymeleaf</a>
   
   <b>Cover API</b> used to retrieve cover image of books is from <a>https://openlibrary.org/developers/api</a>
   
